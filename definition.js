@@ -149,6 +149,6 @@ Blockly.Python['xbot_init_camera'] = function(block) {
   // TODO: Assemble Python into code variable.
   var port = block.getFieldValue('port');
   Blockly.Python.definitions_['import_camera_ai'] = 'from camera_ai import *';
-  var code = 'ai_cam = AI_CAMERA(' + rx + '.pin, ' + tx + '.pin)\n';
+  var code = 'ai_cam = AI_CAMERA(' + port + '.pin)\n';
   return code;
 };
