@@ -67,7 +67,7 @@ Blockly.Python['ai_camera_check_result'] = function(block) {
   var equal = block.getFieldValue('EQUAL');
   var prediction = Blockly.Python.valueToCode(block, 'PREDICTION', Blockly.Python.ORDER_ATOMIC);
   var string = Blockly.Python.valueToCode(block, 'CLASS', Blockly.Python.ORDER_ATOMIC);
-  Blockly.Python.definitions_['import_ai_camera'] = 'from camera_ai import *';
+  Blockly.Python.definitions_['import_ai_camera'] = 'from xbot_camera_ai import *';
   var code = 'ai_cam.check(' + string + ', ' + prediction + ', ' + equal + ')';
   return [code, Blockly.Python.ORDER_NONE];
 };
@@ -89,8 +89,6 @@ Blockly.Blocks["ai_camera_update"] = {
 
 Blockly.Python['ai_camera_update'] = function(block) {
   // TODO: Assemble Python into code variable.
-  var port = block.getFieldValue('PORT');
-  Blockly.Python.definitions_['import_ai_camera'] = 'from camera_ai import *';
   var code = 'ai_cam.update()\n';
   return code;
 };
@@ -112,8 +110,6 @@ Blockly.Blocks["ai_camera_get_classname"] = {
 Blockly.Python['ai_camera_get_classname'] = function(block) {
   // TODO: Assemble Python into code variable.
   var port = block.getFieldValue('PORT');
-  Blockly.Python.definitions_['import_ai_camera'] = 'from camera_ai import *';
-  Blockly.Python.definitions_['init_ai_camera_' + port] = 'ai_camera_' + port + ' = AI_CAMERA(' + port + '2_PIN, ' + port + '1_PIN)\n';
   var code = 'ai_cam.get_classname()';
   return [code, Blockly.Python.ORDER_NONE];
 };
@@ -135,8 +131,6 @@ Blockly.Blocks["ai_camera_get_prediction"] = {
 
 Blockly.Python['ai_camera_get_prediction'] = function(block) {
   // TODO: Assemble Python into code variable.
-  var port = block.getFieldValue('PORT');
-  Blockly.Python.definitions_['import_ai_camera'] = 'from camera_ai import *';
   var code = 'ai_cam.get_prediction()';
   return [code, Blockly.Python.ORDER_NONE];
 };
@@ -148,7 +142,7 @@ Blockly.Python['ai_camera_get_prediction'] = function(block) {
 Blockly.Python['xbot_init_camera'] = function(block) {
   // TODO: Assemble Python into code variable.
   var port = block.getFieldValue('port');
-  Blockly.Python.definitions_['import_camera_ai'] = 'from camera_ai import *';
-  var code = 'ai_cam = AI_CAMERA(' + port + '.pin)\n';
+  Blockly.Python.definitions_['import_camera_ai'] = 'from xbot_camera_ai import *';
+  var code = 'ai_cam = AI_CAMERA(' + port + ')\n';
   return code;
 };
