@@ -1,6 +1,6 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="AI CAMERA" colour="#00A06B" icon="camera">
-    <block type="xbot_sound_start"/>
+    <block type="xbot_init_camera"/>
     <block type="ai_camera_check_result">
       <value name="CLASS">
         <shadow type="text">

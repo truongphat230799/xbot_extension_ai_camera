@@ -1,8 +1,8 @@
 {
-    "name": "Sound Player",
-    "description": "Mục mở rộng của xBot cho module Sound Player JQ8400",
+    "name": "AI Camera",
+    "description": "Mục mở rộng của xBot cho module AI Camera",
     "libs": [
-        "sound_player_jq8400.py"
+        "xbot_camera_ai.py"
     ],
     "blocks": [
         "definition.js"
