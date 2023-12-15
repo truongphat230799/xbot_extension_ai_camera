@@ -30,7 +30,7 @@ Blockly.Blocks['xbot_init_camera'] = {
 Blockly.Blocks["ai_camera_check_result"] = {
   init: function () {
     this.jsonInit({
-      colour: "#0b5394",
+      colour: "#00A06B",
       tooltip: "",
       message0: "camera nhận dạng %1 %2 độ tin cậy > %3 %4",
       output: "Boolean",
@@ -77,7 +77,7 @@ Blockly.Blocks["ai_camera_update"] = {
     this.jsonInit({
       previousStatement: null,
       nextStatement: null,
-      colour: "#0b5394",
+      colour: "#00A06B",
       tooltip: "",
       message0: "camera cập nhật nhận dạng",
       args0: [
@@ -98,7 +98,7 @@ Blockly.Python['ai_camera_update'] = function(block) {
 Blockly.Blocks["ai_camera_get_classname"] = {
   init: function () {
     this.jsonInit({
-      colour: "#0b5394",
+      colour: "#00A06B",
       tooltip: "",
       message0: "đọc kết quả nhận dạng",
       args0: [
@@ -121,7 +121,7 @@ Blockly.Python['ai_camera_get_classname'] = function(block) {
 Blockly.Blocks["ai_camera_get_prediction"] = {
   init: function () {
     this.jsonInit({
-      colour: "#0b5394",
+      colour: "#00A06B",
       tooltip: "",
       message0: "độ tin cậy",
       message0: "đọc độ tin cậy",
